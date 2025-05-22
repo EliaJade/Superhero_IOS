@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vha-rt-I1u">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Superheroes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Superhero_IOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="240" estimatedRowHeight="240" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6YJ-bw-FQI">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SuperheroViewCell" rowHeight="240" id="sKf-Ql-z1z" customClass="SuperheroViewCell" customModule="Superhero_IOS" customModuleProvider="target">
@@ -44,6 +44,7 @@
                                         <connections>
                                             <outlet property="avatarImageView" destination="sgV-0S-jTf" id="DcM-YB-k96"/>
                                             <outlet property="nameLabel" destination="Rao-Lw-PeZ" id="bqs-dV-Y1m"/>
+                                            <segue destination="3uj-Og-U3R" kind="show" id="3ra-Hm-iGM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -58,11 +59,72 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6YJ-bw-FQI" secondAttribute="trailing" id="kg0-ew-YAG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Superheroes" id="v7H-Vh-ggr"/>
                     <connections>
                         <outlet property="tableView" destination="6YJ-bw-FQI" id="PbO-Hh-yxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="8SC-hG-28m">
+            <objects>
+                <viewController id="3uj-Og-U3R" customClass="DetailViewController" customModule="Superhero_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCc-0g-bf6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-t8-biQ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwU-QA-sZA">
+                                        <rect key="frame" x="76" y="8" width="240" height="308"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H34-uY-yJG">
+                                        <rect key="frame" x="0.0" y="324" width="393" height="358"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J8x-QH-AQG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J8x-QH-AQG" firstAttribute="trailing" secondItem="nBT-t8-biQ" secondAttribute="trailing" id="BBt-3d-VlY"/>
+                            <constraint firstItem="J8x-QH-AQG" firstAttribute="bottom" secondItem="nBT-t8-biQ" secondAttribute="bottom" id="BXK-Aq-ABg"/>
+                            <constraint firstItem="nBT-t8-biQ" firstAttribute="leading" secondItem="J8x-QH-AQG" secondAttribute="leading" id="OIg-lM-OsA"/>
+                            <constraint firstItem="nBT-t8-biQ" firstAttribute="top" secondItem="J8x-QH-AQG" secondAttribute="top" id="Rbg-Qu-o29"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zvx-Uk-0dX"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="HwU-QA-sZA" id="oHE-IW-dBw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jx-P9-zDN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925.9541984732823" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8VL-jF-elp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vha-rt-I1u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bs0-3f-Fy2">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vG1-G9-ePz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwL-Ze-WO7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
         </scene>

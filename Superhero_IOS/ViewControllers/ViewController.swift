@@ -8,7 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +22,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         searchSuperheroesByName(name: "a")
         
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.delegate = self
+        self.navigationItem.searchController = searchController
     }
     
     func searchSuperheroesByName (name: String) {
@@ -33,7 +36,22 @@ class ViewController: UIViewController, UITableViewDataSource {
             }
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailVC = segue.destination as! DetailViewController
+        let indexPath = tableView.indexPathForSelectedRow!
+        let superhero = superheroList[indexPath.row]
+        detailVC.superhero = superhero
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchSuperheroesByName(name: searchBar.text  ?? "a")
+    }
         
+    /*func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        <#code#>
+    }*/
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         superheroList.count
     }
