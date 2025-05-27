@@ -16,6 +16,7 @@ struct Superhero: Codable {
     let name: String
     let image: Image
     let biography: Biography
+    let powerstats: Stats
 }
 
 struct Image: Codable {
@@ -34,3 +35,13 @@ struct Biography: Codable {
         case publisher, alignment
     }
 }
+    
+struct Stats: Codable {
+    let intelligence: String
+    let speed: String
+    let strength: String
+    let durability: String
+    let power: String
+    let combat: String
+}
+

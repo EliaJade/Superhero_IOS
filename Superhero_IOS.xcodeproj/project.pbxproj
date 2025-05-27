@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C8740862DE5BCA800EFBE06 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8740852DE5BCA800EFBE06 /* CardView.swift */; };
+		6C8740882DE5D7FC00EFBE06 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8740872DE5D7FC00EFBE06 /* UIViewExtensions.swift */; };
 		6CD1C04A2DDF31D0003A1EA3 /* SuperheroViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD1C0492DDF31D0003A1EA3 /* SuperheroViewCell.swift */; };
 		6CD1C04C2DDF3810003A1EA3 /* UIIMageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD1C04B2DDF3810003A1EA3 /* UIIMageViewExtensions.swift */; };
 		6CD1C0532DDF3E54003A1EA3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD1C0522DDF3E54003A1EA3 /* DetailViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C8740852DE5BCA800EFBE06 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		6C8740872DE5D7FC00EFBE06 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		6CD1C0492DDF31D0003A1EA3 /* SuperheroViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroViewCell.swift; sourceTree = "<group>"; };
 		6CD1C04B2DDF3810003A1EA3 /* UIIMageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIIMageViewExtensions.swift; sourceTree = "<group>"; };
 		6CD1C0522DDF3E54003A1EA3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 			isa = PBXGroup;
 			children = (
 				6CD1C04B2DDF3810003A1EA3 /* UIIMageViewExtensions.swift */,
+				6C8740852DE5BCA800EFBE06 /* CardView.swift */,
+				6C8740872DE5D7FC00EFBE06 /* UIViewExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -194,10 +200,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CD1C04C2DDF3810003A1EA3 /* UIIMageViewExtensions.swift in Sources */,
+				6C8740862DE5BCA800EFBE06 /* CardView.swift in Sources */,
 				6CDF59642DDDDC3100C19552 /* ViewController.swift in Sources */,
 				6CDF59602DDDDC3100C19552 /* AppDelegate.swift in Sources */,
 				6CDF59762DDDE42D00C19552 /* SuperheroResponse.swift in Sources */,
 				6CDF59742DDDDD0200C19552 /* SuperheroProvider.swift in Sources */,
+				6C8740882DE5D7FC00EFBE06 /* UIViewExtensions.swift in Sources */,
 				6CD1C04A2DDF31D0003A1EA3 /* SuperheroViewCell.swift in Sources */,
 				6CDF59622DDDDC3100C19552 /* SceneDelegate.swift in Sources */,
 				6CD1C0532DDF3E54003A1EA3 /* DetailViewController.swift in Sources */,

@@ -9,17 +9,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var cardView: CardView!
     
     var superhero: Superhero!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        avatarImageView.loadFrom(url: superhero.image.url)
+        // Do any additional setup after loading the view.
+        cardView.render(with: superhero)
     }
+        
+        
     
 
     /*
